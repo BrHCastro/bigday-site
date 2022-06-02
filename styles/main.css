@@ -1,0 +1,136 @@
+#navigation {
+  background-color: var(--primary);
+  padding-block: 1.6rem;
+}
+
+#navigation .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 1366px;
+  margin-inline: auto;
+  padding-inline: 3rem;
+}
+
+#navigation .container a.brand {
+  display: block;
+  width: 20rem;
+}
+
+#navigation .container a.brand img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#navigation .container .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--white);
+  gap: 2rem;
+}
+
+#navigation .container .menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#navigation .container .menu ul li {
+  padding-inline: 2rem;
+  color: var(--white);
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+#navigation .container .menu ul li:not(:first-child) {
+  border-left: 1px solid var(--white);
+}
+
+#navigation .container .menu ul li:hover {
+  color: var(--secondary);
+}
+
+#navigation .container .menu a.button {
+  background-color: var(--secondary);
+  padding: 1rem 2rem;
+  color: var(--primary);
+  -webkit-transition: -webkit-filter 0.3s;
+  transition: -webkit-filter 0.3s;
+  transition: filter 0.3s;
+  transition: filter 0.3s, -webkit-filter 0.3s;
+}
+
+#navigation .container .menu a.button:hover {
+  -webkit-filter: brightness(0.8);
+          filter: brightness(0.8);
+}
+
+#navigation .container button.openMenu,
+#navigation .container button.closeMenu {
+  display: none;
+  width: 4rem;
+  height: 4rem;
+  background-color: transparent;
+  border: none;
+}
+
+@media (max-width: 920px) {
+  #navigation .container .menu {
+    width: 100%;
+    height: 100vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: -1;
+    background-color: var(--primary);
+    -webkit-transition: right 0.3s;
+    transition: right 0.3s;
+  }
+  #navigation .container .menu ul {
+    padding-top: 5rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  #navigation .container .menu ul li {
+    padding-block: 1rem;
+    border: 0 !important;
+    font-size: 1.8rem;
+  }
+  #navigation .container button.closeMenu {
+    display: none;
+  }
+  #navigation .container button.openMenu {
+    display: block;
+  }
+  #navigation .container.active .menu {
+    right: 0;
+  }
+  #navigation .container.active button.closeMenu {
+    display: block;
+  }
+  #navigation .container.active button.openMenu {
+    display: none;
+  }
+}
+/*# sourceMappingURL=main.css.map */

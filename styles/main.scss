@@ -1,0 +1,124 @@
+#navigation {
+  background-color: var(--primary);
+  padding-block: 1.6rem;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    max-width: 1366px;
+    margin-inline: auto;
+    padding-inline: 3rem;
+
+    a.brand {
+      display: block;
+      width: 20rem;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+      color: var(--white);
+      gap: 2rem;
+
+      ul {
+        display: flex;
+
+        li {
+          padding-inline: 2rem;
+          color: var(--white);
+          transition: color 0.3s;
+
+          &:not(:first-child) {
+            border-left: 1px solid var(--white);
+          }
+
+          &:hover {
+            color: var(--secondary);
+          }
+        }
+      }
+
+      a.button {
+        background-color: var(--secondary);
+        padding: 1rem 2rem;
+        color: var(--primary);
+        transition: filter 0.3s;
+
+        &:hover {
+          filter: brightness(0.8);
+        }
+      }
+    }
+
+    button.openMenu, 
+    button.closeMenu {
+      display: none;
+
+      width: 4rem;
+      height: 4rem;
+
+      background-color: transparent;
+      border: none;
+    }
+
+    @media (max-width: 920px) {
+      .menu {
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: -1;
+
+        background-color: var(--primary);
+
+        transition: right 0.3s;
+
+        ul {
+          padding-top: 5rem;
+          flex-direction: column;
+          align-items: flex-start;
+
+          li {
+            padding-block: 1rem;
+            border: 0 !important;
+
+            font-size: 1.8rem;
+          }
+        }
+      }
+      
+      button.closeMenu {
+        display: none;
+      }
+
+      button.openMenu {
+        display: block;
+      }
+
+      &.active {
+        .menu {
+          right: 0;
+        }
+
+        button.closeMenu {
+          display: block;
+        }
+  
+        button.openMenu {
+          display: none;
+        }
+      }
+    }
+  }
+}
