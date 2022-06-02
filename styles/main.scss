@@ -166,10 +166,11 @@
 }
 
 #services {
+  padding: 2rem;
+
   .servicesContent {
     max-width: 1140px;
     margin: 0 auto;
-    padding: 2rem;
 
     h3 {
       position: relative;
@@ -200,7 +201,7 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
-      @media (max-width: 660px) {
+      @media (max-width: 650px) {
         grid-template-columns: 1fr;
       }
 
@@ -228,6 +229,80 @@
         a {
           font-weight: bold;
           margin-top: auto;
+        }
+      }
+    }
+  }
+}
+
+#dataDriven {
+  width: 100%;
+  padding: 2rem;
+
+  .dataDrivenContent {
+    max-width: 1140px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    img {
+      max-width: 450px;
+      width: 100%;
+
+      @media (max-width:1100px) {
+        max-width: 300px;
+      }
+
+      @media (max-width:650px) {
+        display: none;
+      }
+    }
+
+    .dataDrivenTextContent {
+      width: 100%;
+      background: linear-gradient(90deg, var(--white) 9.6%, var(--primary) 93.6%);
+      padding: 10px 20px;
+      border-radius: 20px;
+
+      @media (max-width:1100px) {
+        background: rgba(121, 86, 156, 0.6);
+      }
+
+      @media (max-width:650px) {
+        background: rgba(121, 86, 156, 0.6);
+      }
+
+      .dataDrivenText {
+        max-width: 400px;
+        text-align: right;
+        margin-left: auto;
+
+        
+        @media (max-width:650px) {
+          max-width: 500px;
+          margin: 0 auto;
+          text-align: left;
+        }
+
+        h2 {
+          font-size: 4rem;
+          color: var(--white);
+          margin-left: auto;
+
+          span {
+            color: var(--black);
+            font-family: 'Abhaya Libre', serif;
+
+            display: block;
+          }
+        }
+
+        p {
+          color: var(--black);
+          font-weight: 100;
         }
       }
     }
