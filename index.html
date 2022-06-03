@@ -215,6 +215,70 @@
       </div>
     </main>
   </section>
+
+  <footer>
+    <main class="footerContent">
+      <header>
+        <a class="brand" href="#home">
+          <img src="./assets/images/logo_bd.png" alt="Logo" />
+        </a>
+
+        <div class="menu">
+          <div class="menuItem">
+            <a class="title" href="#home">Home</a>
+          </div>
+          <div class="menuItem hasSubItems">
+            <a class="title" href="#services">Serviços</a>
+            <div class="subItems">
+              <a class="sub" href="#">Data</a>
+              <a class="sub" href="#">CRM</a>
+              <a class="sub" href="#">Desenvolvimento</a>
+              <a class="sub" href="#">B.I.</a>
+            </div>
+          </div>
+          <div class="menuItem hasSubItems">
+            <a class="title" href="#about">Sobre</a>
+            <div class="subItems">
+              <a class="sub" href="#">Quem Somos</a>
+            </div>
+          </div>
+          <div class="menuItem hasSubItems">
+            <a class="title" href="#products">Produtos</a>
+            <div class="subItems">
+              <a class="sub" href="#">Dashboards</a>
+              <a class="sub" href="#">BigLink</a>
+            </div>
+          </div>
+          <div class="menuItem">
+            <a class="title" href="#home">Contato</a>
+          </div>
+        </div>
+      </header>
+      <div class="socialLinks">
+        <a href="#" target="_blank">
+          <img src="./assets/images/icons/linkedin.svg" alt="Linkedin" />
+        </a>
+        <a href="#" target="_blank">
+          <img src="./assets/images/icons/instagram.svg" alt="Instagram" />
+        </a>
+        <a href="#" target="_blank">
+          <img src="./assets/images/icons/youtube.svg" alt="YouTube" />
+        </a>
+        <a href="#" target="_blank">
+          <img src="./assets/images/icons/facebook.svg" alt="Facebook" />
+        </a>
+        <a href="#" target="_blank">
+          <img src="./assets/images/icons/twitter.svg" alt="Twitter" />
+        </a>
+      </div>
+      <div class="rights">
+        <a href="#"> Aviso de Privacidade </a>
+        <span>
+          Copyright © 2022 BigDay. All rights reserved.
+        </span>
+      </div>
+    </main>
+  </footer>
 </body>
 
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -252,6 +316,16 @@
     } else {
       menu.classList.add('active');
     }
+  }
+
+  document.querySelectorAll(".menuItem").forEach((item) => {
+    item.addEventListener("click", colapseFooterMenu);
+  });
+
+  function colapseFooterMenu(item) {
+    item.target.classList.contains("active")
+      ? item.target.classList.remove("active")
+      : item.target.classList.add("active");
   }
 </script>
 
