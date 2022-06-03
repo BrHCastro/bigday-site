@@ -399,4 +399,88 @@
   max-width: 600px;
   width: 100%;
 }
+
+#clients {
+  width: 100%;
+  padding: 2rem;
+}
+
+#clients .clientsContent {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+#clients .clientsContent div.titleContent {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#clients .clientsContent div.titleContent h3 {
+  position: relative;
+  font-size: 2rem;
+  color: var(--primary);
+}
+
+#clients .clientsContent div.titleContent h3::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  width: 200px;
+  left: 0;
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(111.3deg, var(--primary) 9.6%, var(--white) 93.6%);
+}
+
+#clients .clientsContent .clientsCarousel {
+  width: 100%;
+  height: 150px;
+}
+
+#clients .clientsContent .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  border: 1;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+#clients .clientsContent .swiper-slide img {
+  display: block;
+  width: 90px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+#clients .clientsContent .swiper-slide img.fixProportion {
+  width: 150px;
+}
+
+#clients .clientsContent .swiper-button-next {
+  display: none;
+}
+
+#clients .clientsContent .swiper-button-prev {
+  display: none;
+}
 /*# sourceMappingURL=main.css.map */

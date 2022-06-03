@@ -12,6 +12,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;700&family=Roboto:wght@100;400;500;700&display=swap"
     rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
   <title>BigDay</title>
 </head>
 
@@ -179,8 +181,69 @@
       <img src="./assets/images/dashboards.svg" alt="dashboards">
     </main>
   </section>
+
+  <section id="clients">
+    <main class="clientsContent">
+      <div class="titleContent">
+        <h3>Projetos Realizados</h3>
+      </div>
+
+      <div class="swiper clientsCarousel">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./assets/images/vedacit.svg" alt="vedacit" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./assets/images/Volkswagen.svg" alt="Volkswagen" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./assets/images/Audi.svg" alt="Audi" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./assets/images/logo-casa-black.svg" alt="casa do saber" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./assets/images/klabin.svg" alt="klabin" />
+          </div>
+          <div class="swiper-slide">
+            <img class="fixProportion" src="./assets/images/cinemark.svg" alt="cinemark" />
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </main>
+  </section>
 </body>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 <script>
+  var swiper = new Swiper(".clientsCarousel", {
+    spaceBetween: 10,
+    loop: true,
+    speed: 4000,
+    breakpoints: {
+      900: {
+        slidesPerView: 6,
+      },
+      700: {
+        slidesPerView: 3,
+      },
+      500: {
+        slidesPerView: 2,
+      },
+      100: {
+        slidesPerView: 2,
+      },
+    },
+    autoplay: {
+      delay: 1000,
+      disableOnInteraction: false,
+    },
+  });
+
   function toggleMenu() {
     const menu = document.querySelector('#navigation .container');
 

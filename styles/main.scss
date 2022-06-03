@@ -315,7 +315,6 @@
   .dashboardsContent {
     max-width: 1140px;
     margin: 0 auto;
-    // border: 1px solid red;
 
     display: flex;
     align-items: center;
@@ -325,7 +324,6 @@
     .dashboardsText {
       max-width: 350px;
       width: 100%;
-      // border: 1px solid red;
 
       h3 {
         font-size: 4rem;
@@ -353,5 +351,97 @@
       max-width: 600px;
       width: 100%;
     }
+  }
+}
+
+#clients {
+  width: 100%;
+  padding: 2rem;
+
+
+
+  .clientsContent {
+    max-width: 1140px;
+    margin: 0 auto;
+
+    div.titleContent {
+      width: fit-content;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      // border: 1px solid red;
+
+      h3 {
+        position: relative;
+        font-size: 2rem;
+        color: var(--primary);
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 100%;
+          width: 200px;
+          left: 0;
+          height: 4px;
+          border-radius: 2px;
+          background: linear-gradient(111.3deg, var(--primary) 9.6%, var(--white) 93.6%);
+        }
+      }
+    }
+
+
+
+
+    .clientsCarousel {
+      width: 100%;
+      height: 150px;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      border: 1;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+
+      img {
+        display: block;
+        width: 90px;
+        object-fit: contain;
+        // transition: opacity 0.2s;
+        // opacity: 0.4;
+
+        &.fixProportion {
+          width: 150px;
+        }
+
+        // &:hover {
+        //   opacity: 1;
+        // }
+      }
+    }
+
+    .swiper-button-next {
+      display: none;
+    }
+
+    .swiper-button-prev {
+      display: none;
+    }
+
   }
 }
