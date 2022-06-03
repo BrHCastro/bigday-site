@@ -280,7 +280,6 @@
         text-align: right;
         margin-left: auto;
 
-        
         @media (max-width:650px) {
           max-width: 500px;
           margin: 0 auto;
@@ -305,6 +304,54 @@
           font-weight: 100;
         }
       }
+    }
+  }
+}
+
+#dashboards {
+  width: 100%;
+  padding: 2rem;
+
+  .dashboardsContent {
+    max-width: 1140px;
+    margin: 0 auto;
+    // border: 1px solid red;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    .dashboardsText {
+      max-width: 350px;
+      width: 100%;
+      // border: 1px solid red;
+
+      h3 {
+        font-size: 4rem;
+        color: var(--primary);
+
+        span {
+          color: var(--black);
+          font-family: 'Abhaya Libre', serif;
+
+          display: block;
+        }
+      }
+
+      strong {
+        margin-top: 10px;
+        display: inline-block;
+      }
+
+      p {
+        font-weight: 100;
+      }
+    }
+
+    img {
+      max-width: 600px;
+      width: 100%;
     }
   }
 }
