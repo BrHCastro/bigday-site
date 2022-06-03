@@ -1,332 +1,400 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;700&family=Roboto:wght@100;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
 
-<head>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./styles/global.css" />
-  <link rel="stylesheet" href="./styles/main.css" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;700&family=Roboto:wght@100;400;500;700&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <title>BigDay</title>
+  </head>
 
-  <title>BigDay</title>
-</head>
-
-<body>
-  <nav id="navigation">
-    <div class="container">
-      <a class="brand" href="#home">
-        <img src="./assets/images/logo_bd.png" alt="Logo" />
-      </a>
-
-      <div class="menu">
-        <ul>
-          <li>
-            <a onclick="toggleMenu()" href="#home">Início</a>
-          </li>
-          <li>
-            <a onclick="toggleMenu()" href="#services">Serviços</a>
-          </li>
-          <li>
-            <a onclick="toggleMenu()" href="#about">Sobre</a>
-          </li>
-          <li>
-            <a onclick="toggleMenu()" href="#products">Produtos</a>
-          </li>
-          <li>
-            <a onclick="toggleMenu()" href="#contact">Contato</a>
-          </li>
-        </ul>
-
-        <a class="button" onclick="toggleMenu()" href="#contact">Solicite uma Demo</a>
-      </div>
-
-      <button onclick="toggleMenu()" class="openMenu" type="button">
-        <img src="./assets/images/menu-outline.svg" alt="" />
-      </button>
-
-      <button onclick="toggleMenu()" class="closeMenu" type="button">
-        <img src="./assets/images/close-outline.svg" alt="" />
-      </button>
-    </div>
-  </nav>
-  <section id="banner">
-    <main class="bannerContent">
-      <div class="bannerText">
-        <h1>
-          Você já se perguntou o que seus dados
-          <span>podem dizer?</span>
-        </h1>
-        <p>
-          As empresas geram informações diversas, mas muitas vezes não são
-          capazes de se estruturar para entender os dados que têm em mãos e
-          perdem grandes oportunidades de negócios.
-        </p>
-
-        <strong>Nós transformamos sua empresa através dos dados.</strong>
-      </div>
-    </main>
-  </section>
-
-  <section id="services">
-    <main class="servicesContent">
-      <h3>O que oferecemos</h3>
-
-      <div class="servicesGrid">
-        <div class="servicesCard">
-          <img src="./assets/images/icons/icone_data.png" alt="data">
-          <strong>Data</strong>
-          <p>
-            Construção de estruturas e bancos de dados em ambiente cloud,
-            on-premisses e Dashboards em realtime para análise de métricas e
-            resultados.
-          </p>
-          <a href="#">Saiba mais</a>
-        </div>
-
-        <div class="servicesCard">
-          <img src="./assets/images/icons/icone_CRM.png" alt="crm">
-          <strong>CRM</strong>
-          <p>
-            Estruturação de campanha de CRM e Performance com foco em atuação em
-            toda a jornada do consumidor.
-          </p>
-          <a href="#">Saiba mais</a>
-        </div>
-
-        <div class="servicesCard">
-          <img src="./assets/images/icons/icone_desenvolvimento.png" alt="desenvolvimento">
-          <strong>Desenvolvimento</strong>
-          <p>
-            Estruturação de campanha de CRM e Performance com foco em atuação em
-            toda a jornada do consumidor.
-          </p>
-          <a href="#">Saiba mais</a>
-        </div>
-
-        <div class="servicesCard">
-          <img src="./assets/images/icons/icone_BI.png" alt="bi">
-          <strong>B.I</strong>
-          <p>
-            Núcleo de Insights e análises de dados com visões estratégicas para
-            avaliações de resultados.
-          </p>
-          <a href="#">Saiba mais</a>
-        </div>
-
-        <div class="servicesCard">
-          <img src="./assets/images/icons/icone_agencias.png" alt="agencias">
-          <strong>Soluções para Agências</strong>
-          <p>
-            Oferecemos uma solução completa para todas as suas necessidades de
-            dados e pesquisa. Seremos seu setor de dados e inteligência.
-          </p>
-          <a href="#">Saiba mais</a>
-        </div>
-
-        <div class="servicesCard">
-          <img src="./assets/images/icons/icone_eventos.png" alt="eventos">
-          <strong>Soluções para Eventos</strong>
-          <p>
-            Serviços de inteligência com análise de dados e insights criativos.
-            Atuamos e acompanhamos a interação de plataformas para a captação e
-            análise de dados durante o evento.
-          </p>
-          <a href="#">Saiba mais</a>
-        </div>
-      </div>
-    </main>
-  </section>
-
-  <section id="dataDriven">
-    <main class="dataDrivenContent">
-      <img src="./assets/images/monitor.png" alt="data driven">
-
-      <div class="dataDrivenTextContent">
-        <div class="dataDrivenText">
-          <h2>
-            Porque sua empresa deve ser
-            <span>data driven.</span>
-          </h2>
-
-          <p>
-            Dados são hoje o maior ativo que uma empresa pode ter, organizando e
-            orientando as suas decisões com base nesses informações você vai gerar
-            economia de tempo e dinheiro.
-          </p>
-        </div>
-      </div>
-    </main>
-  </section>
-
-  <section id="dashboards">
-    <main class="dashboardsContent">
-      <div class="dashboardsText">
-        <h3>
-          Dashboards e relatorias
-          <span>ao seu alcance.</span>
-        </h3>
-        <p>
-          Agora você contrata exatamente o que precisa entre dashboards e
-          relatoria e paga somente o que precisar por um período determinado.
-        </p>
-        <strong>Confira nossos planos e modelos</strong>
-      </div>
-
-      <img src="./assets/images/dashboards.svg" alt="dashboards">
-    </main>
-  </section>
-
-  <section id="clients">
-    <main class="clientsContent">
-      <div class="titleContent">
-        <h3>Projetos Realizados</h3>
-      </div>
-
-      <div class="swiper clientsCarousel">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="./assets/images/vedacit.svg" alt="vedacit" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./assets/images/Volkswagen.svg" alt="Volkswagen" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./assets/images/Audi.svg" alt="Audi" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./assets/images/logo-casa-black.svg" alt="casa do saber" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./assets/images/klabin.svg" alt="klabin" />
-          </div>
-          <div class="swiper-slide">
-            <img class="fixProportion" src="./assets/images/cinemark.svg" alt="cinemark" />
-          </div>
-        </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
-      </div>
-    </main>
-  </section>
-
-  <footer>
-    <main class="footerContent">
-      <header>
-        <a class="brand" href="#home">
+  <body id="home">
+    <nav id="navigation">
+      <div class="container">
+        <a class="brand" href="#home" >
           <img src="./assets/images/logo_bd.png" alt="Logo" />
         </a>
 
         <div class="menu">
-          <div class="menuItem">
-            <a class="title" href="#home">Home</a>
+          <ul>
+            <li>
+              <a onclick="toggleMenu()" href="#home">Home</a>
+            </li>
+            <li>
+              <a onclick="toggleMenu()" href="#services">Serviços</a>
+            </li>
+            <li>
+              <a onclick="toggleMenu()" href="#about">Sobre</a>
+            </li>
+            <li>
+              <a onclick="toggleMenu()" href="#products">Produtos</a>
+            </li>
+            <li>
+              <a onclick="toggleMenu()" href="#contact">Contato</a>
+            </li>
+          </ul>
+
+          <a class="button" onclick="toggleMenu()" href="#contact"
+            >Solicite uma Demo</a
+          >
+        </div>
+
+        <button onclick="toggleMenu()" class="openMenu" type="button">
+          <img src="./assets/images/menu-outline.svg" alt="" />
+        </button>
+
+        <button onclick="toggleMenu()" class="closeMenu" type="button">
+          <img src="./assets/images/close-outline.svg" alt="" />
+        </button>
+      </div>
+    </nav>
+
+    <section id="banner">
+      <main class="bannerContent">
+        <div class="bannerText">
+          <h1>
+            Você já se perguntou o que seus dados
+            <span>podem dizer?</span>
+          </h1>
+          <p>
+            As empresas geram informações diversas, mas muitas vezes não são
+            capazes de se estruturar para entender os dados que têm em mãos e
+            perdem grandes oportunidades de negócios.
+          </p>
+
+          <strong>Nós transformamos sua empresa através dos dados.</strong>
+        </div>
+      </main>
+    </section>
+
+    <section id="services">
+      <main class="servicesContent">
+        <h3>O que oferecemos</h3>
+
+        <div class="servicesGrid">
+          <div class="servicesCard">
+            <img src="./assets/images/icons/icone_data.png" alt="data" />
+            <strong>Data</strong>
+            <p>
+              Construção de estruturas e bancos de dados em ambiente cloud,
+              on-premisses e Dashboards em realtime para análise de métricas e
+              resultados.
+            </p>
+            <a href="#">Saiba mais</a>
           </div>
-          <div class="menuItem hasSubItems">
-            <a class="title" href="#services">Serviços</a>
-            <div class="subItems">
-              <a class="sub" href="#">Data</a>
-              <a class="sub" href="#">CRM</a>
-              <a class="sub" href="#">Desenvolvimento</a>
-              <a class="sub" href="#">B.I.</a>
-            </div>
+
+          <div class="servicesCard">
+            <img src="./assets/images/icons/icone_CRM.png" alt="crm" />
+            <strong>CRM</strong>
+            <p>
+              Estruturação de campanha de CRM e Performance com foco em atuação
+              em toda a jornada do consumidor.
+            </p>
+            <a href="#">Saiba mais</a>
           </div>
-          <div class="menuItem hasSubItems">
-            <a class="title" href="#about">Sobre</a>
-            <div class="subItems">
-              <a class="sub" href="#">Quem Somos</a>
-            </div>
+
+          <div class="servicesCard">
+            <img
+              src="./assets/images/icons/icone_desenvolvimento.png"
+              alt="desenvolvimento"
+            />
+            <strong>Desenvolvimento</strong>
+            <p>
+              Estruturação de campanha de CRM e Performance com foco em atuação
+              em toda a jornada do consumidor.
+            </p>
+            <a href="#">Saiba mais</a>
           </div>
-          <div class="menuItem hasSubItems">
-            <a class="title" href="#products">Produtos</a>
-            <div class="subItems">
-              <a class="sub" href="#">Dashboards</a>
-              <a class="sub" href="#">BigLink</a>
-            </div>
+
+          <div class="servicesCard">
+            <img src="./assets/images/icons/icone_BI.png" alt="bi" />
+            <strong>B.I</strong>
+            <p>
+              Núcleo de Insights e análises de dados com visões estratégicas
+              para avaliações de resultados.
+            </p>
+            <a href="#">Saiba mais</a>
           </div>
-          <div class="menuItem">
-            <a class="title" href="#home">Contato</a>
+
+          <div class="servicesCard">
+            <img
+              src="./assets/images/icons/icone_agencias.png"
+              alt="agencias"
+            />
+            <strong>Soluções para Agências</strong>
+            <p>
+              Oferecemos uma solução completa para todas as suas necessidades de
+              dados e pesquisa. Seremos seu setor de dados e inteligência.
+            </p>
+            <a href="#">Saiba mais</a>
+          </div>
+
+          <div class="servicesCard">
+            <img src="./assets/images/icons/icone_eventos.png" alt="eventos" />
+            <strong>Soluções para Eventos</strong>
+            <p>
+              Serviços de inteligência com análise de dados e insights
+              criativos. Atuamos e acompanhamos a interação de plataformas para
+              a captação e análise de dados durante o evento.
+            </p>
+            <a href="#">Saiba mais</a>
           </div>
         </div>
-      </header>
-      <div class="socialLinks">
-        <a href="#" target="_blank">
-          <img src="./assets/images/icons/linkedin.svg" alt="Linkedin" />
-        </a>
-        <a href="#" target="_blank">
-          <img src="./assets/images/icons/instagram.svg" alt="Instagram" />
-        </a>
-        <a href="#" target="_blank">
-          <img src="./assets/images/icons/youtube.svg" alt="YouTube" />
-        </a>
-        <a href="#" target="_blank">
-          <img src="./assets/images/icons/facebook.svg" alt="Facebook" />
-        </a>
-        <a href="#" target="_blank">
-          <img src="./assets/images/icons/twitter.svg" alt="Twitter" />
-        </a>
-      </div>
-      <div class="rights">
-        <a href="#"> Aviso de Privacidade </a>
-        <span>
-          Copyright © 2022 BigDay. All rights reserved.
-        </span>
-      </div>
-    </main>
-  </footer>
-</body>
+      </main>
+    </section>
 
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <section id="dataDriven">
+      <main class="dataDrivenContent">
+        <img src="./assets/images/monitor.png" alt="data driven" />
 
-<script>
-  var swiper = new Swiper(".clientsCarousel", {
-    spaceBetween: 10,
-    loop: true,
-    speed: 4000,
-    breakpoints: {
-      900: {
-        slidesPerView: 6,
-      },
-      700: {
-        slidesPerView: 3,
-      },
-      500: {
-        slidesPerView: 2,
-      },
-      100: {
-        slidesPerView: 2,
-      },
-    },
-    autoplay: {
-      delay: 1000,
-      disableOnInteraction: false,
-    },
-  });
+        <div class="dataDrivenTextContent">
+          <div class="dataDrivenText">
+            <h2>
+              Porque sua empresa deve ser
+              <span>data driven.</span>
+            </h2>
 
-  function toggleMenu() {
-    const menu = document.querySelector('#navigation .container');
+            <p>
+              Dados são hoje o maior ativo que uma empresa pode ter, organizando
+              e orientando as suas decisões com base nesses informações você vai
+              gerar economia de tempo e dinheiro.
+            </p>
+          </div>
+        </div>
+      </main>
+    </section>
 
-    if (menu.classList.contains('active')) {
-      menu.classList.remove('active');
-    } else {
-      menu.classList.add('active');
+    <section id="dashboards">
+      <main class="dashboardsContent">
+        <div class="dashboardsText">
+          <h3>
+            Dashboards e relatorias
+            <span>ao seu alcance.</span>
+          </h3>
+          <p>
+            Agora você contrata exatamente o que precisa entre dashboards e
+            relatoria e paga somente o que precisar por um período determinado.
+          </p>
+          <strong>Confira nossos planos e modelos</strong>
+        </div>
+
+        <img src="./assets/images/dashboards.svg" alt="dashboards" />
+      </main>
+    </section>
+
+    <section id="clients">
+      <main class="clientsContent">
+        <div class="titleContent">
+          <h3>Projetos Realizados</h3>
+        </div>
+
+        <div class="swiper clientsCarousel">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./assets/images/vedacit.svg" alt="vedacit" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/Volkswagen.svg" alt="Volkswagen" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/Audi.svg" alt="Audi" />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="./assets/images/logo-casa-black.svg"
+                alt="casa do saber"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/klabin.svg" alt="klabin" />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="fixProportion"
+                src="./assets/images/cinemark.svg"
+                alt="cinemark"
+              />
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </main>
+    </section>
+
+    <section id="contact">
+      <main class="contactContent">
+        <div class="titleContent">
+          <h3>Fale com a gente</h3>
+        </div>
+        <form>
+          <div class="colA">
+            <input type="text" placeholder="Nome" />
+            <input
+              type="text"
+              placeholder="Telefone"
+              onblur="InputPhoneMask(event)"
+            />
+            <input type="email" placeholder="E-mail" />
+            <input type="text" placeholder="Empresa" />
+          </div>
+          <div class="colB">
+            <select aria-placeholder="">
+              <option>Solução</option>
+              <option value="1">Teste</option>
+              <option value="2">Teste</option>
+              <option value="3">Teste</option>
+              <option value="4">Teste</option>
+            </select>
+            <textarea placeholder="Descreva a sua necessidade"></textarea>
+          </div>
+          <button type="submit">Enviar</button>
+        </form>
+      </main>
+    </section>
+
+    <footer>
+      <main class="footerContent">
+        <header>
+          <a class="brand" href="#home">
+            <img src="./assets/images/logo_bd.png" alt="Logo" />
+          </a>
+
+          <div class="menu">
+            <div class="menuItem">
+              <a class="title" href="#home">Home</a>
+            </div>
+            <div class="menuItem hasSubItems">
+              <a class="title" href="#services">Serviços</a>
+              <div class="subItems">
+                <a class="sub" href="#">Data</a>
+                <a class="sub" href="#">CRM</a>
+                <a class="sub" href="#">Desenvolvimento</a>
+                <a class="sub" href="#">B.I.</a>
+              </div>
+            </div>
+            <div class="menuItem hasSubItems">
+              <a class="title" href="#about">Sobre</a>
+              <div class="subItems">
+                <a class="sub" href="#">Quem Somos</a>
+              </div>
+            </div>
+            <div class="menuItem hasSubItems">
+              <a class="title" href="#products">Produtos</a>
+              <div class="subItems">
+                <a class="sub" href="#">Dashboards</a>
+                <a class="sub" href="#">BigLink</a>
+              </div>
+            </div>
+            <div class="menuItem">
+              <a class="title" href="#home">Contato</a>
+            </div>
+          </div>
+        </header>
+        <div class="socialLinks">
+          <a href="#" target="_blank">
+            <img src="./assets/images/icons/linkedin.svg" alt="Linkedin" />
+          </a>
+          <a href="#" target="_blank">
+            <img src="./assets/images/icons/instagram.svg" alt="Instagram" />
+          </a>
+          <a href="#" target="_blank">
+            <img src="./assets/images/icons/youtube.svg" alt="YouTube" />
+          </a>
+          <a href="#" target="_blank">
+            <img src="./assets/images/icons/facebook.svg" alt="Facebook" />
+          </a>
+          <a href="#" target="_blank">
+            <img src="./assets/images/icons/twitter.svg" alt="Twitter" />
+          </a>
+        </div>
+        <div class="rights">
+          <a href="#"> Aviso de Privacidade </a>
+          <span> Copyright © 2022 BigDay. All rights reserved. </span>
+        </div>
+      </main>
+    </footer>
+  </body>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <script>
+    var swiper = new Swiper(".clientsCarousel", {
+      spaceBetween: 10,
+      loop: true,
+      speed: 4000,
+      breakpoints: {
+        900: {
+          slidesPerView: 6,
+        },
+        700: {
+          slidesPerView: 3,
+        },
+        500: {
+          slidesPerView: 2,
+        },
+        100: {
+          slidesPerView: 2,
+        },
+      },
+      autoplay: {
+        delay: 1000,
+        disableOnInteraction: false,
+      },
+    });
+
+    function toggleMenu() {
+      const menu = document.querySelector("#navigation .container");
+
+      if (menu.classList.contains("active")) {
+        menu.classList.remove("active");
+      } else {
+        menu.classList.add("active");
+      }
     }
-  }
 
-  document.querySelectorAll(".menuItem").forEach((item) => {
-    item.addEventListener("click", colapseFooterMenu);
-  });
+    document.querySelectorAll(".menuItem").forEach((item) => {
+      item.addEventListener("click", colapseFooterMenu);
+    });
 
-  function colapseFooterMenu(item) {
-    item.target.classList.contains("active")
-      ? item.target.classList.remove("active")
-      : item.target.classList.add("active");
-  }
-</script>
+    function colapseFooterMenu(item) {
+      item.target.classList.contains("active")
+        ? item.target.classList.remove("active")
+        : item.target.classList.add("active");
+    }
 
+    function InputPhoneMask(value) {
+      const number = value.target.value;
+      const v = number.toString();
+      
+      let i = 0;
+      let pattern = "";
+
+      if (number.length < 10 || number.length > 11) {
+        return;
+      }
+
+      console.log("chamei");
+      if (number.length === 10) {
+        pattern = "(##) ####-####";
+      } else {
+        pattern = "(##) #####-####";
+      }
+
+      value.target.value = pattern.replace(/#/g, () => v[i++] || "");
+    }
+  </script>
 </html>

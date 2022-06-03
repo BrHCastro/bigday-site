@@ -1,6 +1,11 @@
 #navigation {
   background-color: var(--primary);
   padding-block: 1.6rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
 }
 
 #navigation .container {
@@ -95,7 +100,7 @@
         -ms-flex-direction: column;
             flex-direction: column;
     position: fixed;
-    top: 0;
+    top: var(--nav-height);
     right: -100%;
     z-index: -1;
     background-color: var(--primary);
@@ -170,7 +175,7 @@
 
 #banner .bannerContent .bannerText h1 span {
   color: var(--black);
-  font-family: 'Abhaya Libre', serif;
+  font-family: "Abhaya Libre", serif;
   display: block;
 }
 
@@ -180,7 +185,7 @@
 }
 
 #services {
-  padding: 2rem;
+  padding: 10rem;
 }
 
 #services .servicesContent {
@@ -341,7 +346,7 @@
 
 #dataDriven .dataDrivenContent .dataDrivenTextContent .dataDrivenText h2 span {
   color: var(--black);
-  font-family: 'Abhaya Libre', serif;
+  font-family: "Abhaya Libre", serif;
   display: block;
 }
 
@@ -382,7 +387,7 @@
 
 #dashboards .dashboardsContent .dashboardsText h3 span {
   color: var(--black);
-  font-family: 'Abhaya Libre', serif;
+  font-family: "Abhaya Libre", serif;
   display: block;
 }
 
@@ -482,6 +487,128 @@
 
 #clients .clientsContent .swiper-button-prev {
   display: none;
+}
+
+#contact {
+  width: 100%;
+  padding: 2rem;
+}
+
+#contact .contactContent {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+#contact .contactContent div.titleContent {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#contact .contactContent div.titleContent h3 {
+  position: relative;
+  font-size: 2rem;
+  color: var(--primary);
+}
+
+#contact .contactContent div.titleContent h3::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  width: 200px;
+  left: 0;
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(111.3deg, var(--primary) 9.6%, var(--white) 93.6%);
+}
+
+#contact .contactContent form {
+  max-width: 90rem;
+  margin: 6rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+
+#contact .contactContent form input,
+#contact .contactContent form select {
+  width: 100%;
+  height: 5rem;
+  padding: 1rem 1rem 0;
+  border: 2px solid var(--primary);
+  color: var(--text);
+}
+
+#contact .contactContent form input:not(:last-child),
+#contact .contactContent form select:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+#contact .contactContent form .colA {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+#contact .contactContent form .colB {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#contact .contactContent form .colB textarea {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 1rem 1rem 0;
+  border: 2px solid var(--primary);
+  color: var(--text);
+}
+
+#contact .contactContent form button[type="submit"] {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  padding: 1rem 2rem;
+  background: var(--primary);
+  color: var(--white);
+  border: none;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+}
+
+#contact .contactContent form button[type="submit"]:hover {
+  -webkit-filter: brightness(0.9);
+          filter: brightness(0.9);
+}
+
+@media (max-width: 650px) {
+  #contact form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #contact form textarea {
+    min-height: 20rem;
+  }
 }
 
 footer {
