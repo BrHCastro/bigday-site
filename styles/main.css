@@ -141,26 +141,22 @@
 
 #banner {
   width: 100%;
-  height: 60rem;
   padding: 2rem;
-  background: url("../assets/images/hero_img.svg");
-  background-repeat: no-repeat;
-  background-position: 101% -95px;
-  background-size: auto;
+}
+
+#banner .bannerContent {
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-#banner .bannerContent {
-  max-width: 1140px;
-  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 #banner .bannerContent .bannerText {
@@ -184,8 +180,14 @@
   display: inline-block;
 }
 
+#banner .bannerContent img {
+  max-width: 600px;
+  width: 100%;
+}
+
 #services {
-  padding: 10rem;
+  width: 100%;
+  padding: 2rem;
 }
 
 #services .servicesContent {
@@ -487,6 +489,147 @@
 
 #clients .clientsContent .swiper-button-prev {
   display: none;
+}
+
+#integrated {
+  width: 100%;
+  padding: 2rem;
+}
+
+#integrated .integratedContent {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 20px;
+}
+
+#integrated .integratedContent img {
+  max-width: 600px;
+  width: 100%;
+}
+
+#integrated .integratedContent .integratedText {
+  max-width: 320px;
+  width: 100%;
+  text-align: right;
+}
+
+#integrated .integratedContent .integratedText h3 {
+  font-size: 4rem;
+  font-family: "Abhaya Libre", serif;
+  color: var(--black);
+  line-height: 30px;
+}
+
+#integrated .integratedContent .integratedText h3 span {
+  font-family: "Roboto", serif;
+  font-size: 3rem;
+  color: var(--primary);
+  display: block;
+}
+
+#integrated .integratedContent .integratedText p {
+  margin-top: 10px;
+  font-weight: 100;
+}
+
+#integrated .integratedContent .integratedText p strong {
+  color: var(--black);
+}
+
+#media {
+  width: 100%;
+  padding: 2rem;
+}
+
+#media .mediaContent {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+#media .mediaContent div.titleContent {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#media .mediaContent div.titleContent h3 {
+  position: relative;
+  font-size: 2rem;
+  color: var(--primary);
+}
+
+#media .mediaContent div.titleContent h3::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  width: 200px;
+  left: 0;
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(111.3deg, var(--primary) 9.6%, var(--white) 93.6%);
+}
+
+#media .mediaContent .mediaGrid {
+  margin-top: 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 1100px) {
+  #media .mediaContent .mediaGrid {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  #media .mediaContent .mediaGrid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+#media .mediaContent .mediaGrid .mediaCard {
+  background-color: var(--white);
+  -webkit-box-shadow: 0 5px 12px rgba(121, 86, 156, 0.2);
+          box-shadow: 0 5px 12px rgba(121, 86, 156, 0.2);
+  padding: 20px;
+  text-align: center;
+}
+
+#media .mediaContent .mediaGrid .mediaCard h4 {
+  color: var(--primary);
+}
+
+#media .mediaContent .mediaGrid .mediaCard p {
+  font-weight: 100;
+  margin: 10px 0;
+}
+
+#media .mediaContent .mediaGrid .mediaCard a {
+  font-weight: bold;
 }
 
 #contact {
