@@ -173,7 +173,7 @@
 
 #services {
   width: 100%;
-  padding: 2rem;
+  padding: 12rem 2rem;
 
   .servicesContent {
     max-width: 1140px;
@@ -631,11 +631,11 @@
         }
       }
 
-      .colA {
+      .inputTextColumn {
         flex: 1;
       }
 
-      .colB {
+      .TextAreaColumn {
         flex: 1;
         display: flex;
         flex-direction: column;
@@ -843,5 +843,25 @@ footer {
       align-items: center;
       gap: 1rem;
     }
+  }
+}
+
+#backToTopButton {
+  position: fixed;
+  bottom: 2rem;
+  right: 3rem;
+  z-index: 10000;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(100%);
+  transition: all 0.2s;
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    filter: drop-shadow(0 0 0.05rem var(--headline));
   }
 }
