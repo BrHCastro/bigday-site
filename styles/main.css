@@ -965,4 +965,9 @@ footer .rights {
   -webkit-filter: drop-shadow(0 0 0.05rem var(--headline));
           filter: drop-shadow(0 0 0.05rem var(--headline));
 }
+
+#backToTopButton svg {
+  border: 1px solid var(--white);
+  border-radius: 50%;
+}
 /*# sourceMappingURL=main.css.map */

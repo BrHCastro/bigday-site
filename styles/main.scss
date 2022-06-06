@@ -864,4 +864,9 @@ footer {
     transform: translateY(0);
     filter: drop-shadow(0 0 0.05rem var(--headline));
   }
+
+  svg {
+    border: 1px solid var(--white);
+    border-radius: 50%;
+  }
 }
